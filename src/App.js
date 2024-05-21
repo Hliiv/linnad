@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Linn from './Linn';
+
+const moreCities = [
+  {
+    nimi:'Tallinn',
+  riik: 'Eesti',
+  markused: 'gfisufuf'
+
+  },
+  
+  {nimi:'Pärnu',
+  riik: 'Eesti',
+  markused: 'gfisufuf'
+
+  },
+
+  {nimi:'Elva',
+  riik: 'Eesti',
+  markused: 'gfisufuf'
+
+  }
+]
 
 function App() {
+  const moreCitiesJsx = moreCities.map((city)=> <Linn nimi= {city.nimi} riik = {city.riik} />)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1> Minu lemmiklinnad</h1>
+      <Linn nimi="Pariis" riik="Prantsusmaa" markused="adshhjjakkka" />
+      <Linn nimi="Leon" riik="Prantsusmaa" markused="adshhjjakkka" />
+      <Linn nimi="Toulouse" riik="Prantsusmaa" markused="adshhjjakkka" />
+      <Linn nimi="Berliin" riik="Saksamaa" markused="adshhjjakkka" />
+      <Linn nimi="London" riik="Inglismaa" markused="adshhjjakkka" />
+      <Linn nimi="Brighton" riik="Inglismaa" markused="adshhjjakkka" />
+      {moreCitiesJsx}
     </div>
   );
 }
