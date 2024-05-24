@@ -1,22 +1,25 @@
-function Linn(props){
-    console.log (props)
+import Counter from "./Counter";
+function Linn(props) {
+    console.log(props)
 
-    let cityStyle="";
+    let cityStyle = "";
     if (props.riik === "Prantsusmaa") {
         cityStyle = "french-city"
 
 
     }
-     let remarks= ""
-     if ( props.riik === "Inglismaa")
-        { remarks =<p> {props.markused}</p>
+    let remarks = ""
+    if (props.riik === "Inglismaa") {
+        remarks = <p> {props.markused}</p>
 
-        }
-       
-    return ( <div>
-                <h2 className={cityStyle}> {props.nimi} </h2>
-                <h3>{props.riik}</h3>
-                	{remarks}
-    </div>)
+    }
+
+    return (<div>
+        <h2 className={cityStyle}> {props.nimi} </h2>
+        <h3>{props.riik}</h3>
+        {remarks}
+        <Counter/>
+    </div>
+    )
 }
 export default Linn
