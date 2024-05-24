@@ -6,16 +6,15 @@ function Counter() {
     let [amount, setAmount] = useState(0)
 
     const clickResponse = () => {
-        
+
         setAmount(amount + 1)
     }
 
 
 
-        const clickResponseDecrease = () =>
-            {
-            setAmount(amount + 1)
-    
+    const clickResponseDecrease = () => {
+        setAmount(amount + 1)
+
     }
     return (
         <>
@@ -23,5 +22,5 @@ function Counter() {
             {amount}
             <button onClick={clickResponse}>Increase</button>
         </>)
-    }
-        export default Counter 
+}
+export default Counter 
