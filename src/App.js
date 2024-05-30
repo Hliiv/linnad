@@ -1,7 +1,7 @@
 
 import './App.css';
 import Linn from './Linn';
-import Linn2 from './linn2';
+import Linn2 from './Lnn2';
 import Counter from './Counter';
 
 const moreCities = [
@@ -40,7 +40,7 @@ function App() {
       <Linn nimi="London" riik="Inglismaa" markused="adshhjjakkka" />
       <Linn nimi="Brighton" riik="Inglismaa" markused="adshhjjakkka" />
       {moreCitiesJsx}
-     
+      <Linn2 nimi="Riia" />
       </div>
   );
 }
